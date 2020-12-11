@@ -10,8 +10,8 @@ def distance_to_goal(start, goal, obstacles)
       return jumps if goal == current
 
       neighbours = get_neighbours(current)
-      neighbours.reject! { |neighbour| obstacles.include?(neighbour) }
-      neighbours.reject! { |neighbour| visited.include?(neighbour) }
+      neighbours.reject! { |neighbour| obstacles.include?(neighbour) || visited.include?(neighbour)}
+
       queue.push(*neighbours)
       visited.push(*neighbours)
     end
