@@ -32,7 +32,6 @@ def get_neighbours(position)
   neighbours << [position[0] + 2, position[1] - 1]
 end
 
-board = Array.new { 8.times { |x| 8.times { |y| [x, y] } } }
 obstacles = [[1, 5], [2, 3], [8,0], [1,1]]
 start = [4, 4]
 goal = [9, 10]
